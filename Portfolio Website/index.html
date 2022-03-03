@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <!---Header-->
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width" />
+            <title>Jessica Fellows</title>
+            <link rel="stylesheet" type="text/css" href="./Stylesheet/portfolio.css">
+    </head>
+
+    <!--Body section-->
+    <body class="Background">
+
+            <!---Navigation-->
+            <div class="Navbar">
+                <a class="active" href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#GitHub">GitHub</a>
+                <a href="#Contact">Contact</a>
+            </div>
+
+            <!--Breaks-->
+            <br>
+            <br>
+
+            <!--Video background in home section-->
+            <div id="Home">
+                <video autoplay muted loop id="Typing_Video">
+                    <source src="images/Typing.mp4" type="video/mp4">
+                    <!--Alt text for video-->
+                    Your browser does not support HTML5 video.
+                </video>
+            </div>
+
+            <!--Text over video-->
+            <div class="Video_Text">
+                <h1 class="white-text">Jessica Fellows's Portfolio</h1>
+                <strong>
+                    <p class="center">
+                    
+                            <br>Welcome to my portfolio website! You will find examples of my coding experience and background below.
+                            <br>
+                            <br>Thanks for stopping by &#x1F60E;
+                        </p>
+                </strong>
+            </div>
+
+            <!--About me section-->
+            <div class="Row" id="About">
+                <!--Left side-->
+                <div class="Column_2">
+                    <img src="Images/gaming.jpg" alt="Gaming controller">
+                </div>
+                <!--Right side-->
+                <div class="Column_1">
+                    <h1>About</h1>
+                    <p>
+                        I've always had a passion for video games and have decided to pursure game development as a career.
+                        <br>
+                        <br>I'm a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Game Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, C++ and more. 
+                        <br>
+                        <br>I'm currently looking for an entry level game dev job. <a href="#Contact">Contact</a> me below!
+                    </p>
+                </div>
+            </div>
+
+            <!--Github link-->
+            <div class="Row" id="GitHub">
+                <!--Left side-->
+                <div class="Column_1">
+                    <h1>GitHub</h1>
+                    <p>
+                        My GitHub profile and previous work can be found here:
+                        <br>
+                        <p class="center"><a href="https://github.com/infinitejess">Jessica Fellows GitHub</a></p>
+                    </p>
+                </div>
+                <!--Right side-->
+                <div class="Column_2">
+                    <a href="https://github.com/infinitejess" target="_blank"><img src="Images/coding.jpg" alt="Coding"></a>
+                </div>
+            </div>
+
+            <!--Conaact me-->
+            <div class="Row" id="Contact">
+                <!--Contact image left side-->
+                <div class="Column_2 Column_tall">
+                    <img src="Images/contact.jpg" alt="Contact me">
+                </div>
+                <!--Contact form right side-->
+                <div class="Column_1 Column_Tall">
+                    <!--Form Data-->
+                    <form action="https://formspree.io/f/mleznnng" method="POST">
+                        <label>Name:</label>
+                            <input type="text" placeholder="Please enter your name here">
+                        <label>Email:</label>
+                            <input type="text" id="Email" placeholder="Please enter your email here">
+                        <label>Message:</label>
+                            <input type="text" id="Message" placeholder="Please write your message here">
+                            <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+
+            <!--Footer-->
+            <footer>
+                <p>
+                    <p class="center"> Jessica Fellows &nbsp;|&nbsp; 2022</p>
+                    <br>
+                </p>
+            </footer>
+    </body>
+</html>
