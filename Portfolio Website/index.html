@@ -5,7 +5,8 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width" />
             <title>Jessica Fellows</title>
-            <link rel="stylesheet" type="text/css" href="./Stylesheet/portfolio.css">
+            <link rel="shortcut icon" type="img/jpg" href="Images/coding_icon.png">
+            <link rel="stylesheet" type="text/css" href="Stylesheet/portfolio.css">
     </head>
 
     <!--Body section-->
@@ -14,19 +15,16 @@
             <!---Navigation-->
             <div class="Navbar">
                 <a class="active" href="#Home">Home</a>
+                <a href="#Slideshow">Slideshow</a>
                 <a href="#About">About</a>
                 <a href="#GitHub">GitHub</a>
-                <a href="#Contact">Contact</a>
+                <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
             </div>
-
-            <!--Breaks-->
-            <br>
-            <br>
 
             <!--Video background in home section-->
             <div id="Home">
                 <video autoplay muted loop id="Typing_Video">
-                    <source src="images/Typing.mp4" type="video/mp4">
+                    <source src="Images/Typing.mp4" type="video/mp4">
                     <!--Alt text for video-->
                     Your browser does not support HTML5 video.
                 </video>
@@ -43,6 +41,58 @@
                             <br>Thanks for stopping by &#x1F60E;
                         </p>
                 </strong>
+            </div>
+
+            <!--Slideshow-->
+            <div id="Slideshow">
+                <div id="Slideshow_Background">
+                    <div id="Slideshow_Container">
+                        <!--Slide 1/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/Square Personal Photo(1).png" alt="">
+                            <div class="text">I will update these photos and captions later!</div>
+                        </div>
+                        <!--Slide 2/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/HTML_CSS_and_JavaScript.jpeg" alt="html, css, js">
+                            <div class="text">HTML, CSS, JS</div>
+                        </div>
+                        <!--Slide 3/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/Python.png" alt="python">
+                            <div class="text">Python</div>
+                        </div>
+                        <!--Slide 4/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/SQL_and_Database(1).jpg" alt="sql">
+                            <div class="text">SQL</div>
+                        </div>
+                        <!--Slide 5/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/C_Sharp_and_Dot_NET(1).png" alt="C Sharp">
+                            <div class="text">C Sharp</div>
+                        </div>
+                        <!--Slide 6/6-->
+                        <div class="mySlides fade">
+                            <img class="Slideshow_Images" src="Images/Square Custom Picture(1).png" alt="other code">
+                            <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div>
+                        </div>
+                        <!--Prev and next buttons-->
+                        <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!--Slideshow Dots-->
+                    <div style="text-align: center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                    </div>
+                </div>
             </div>
 
             <!--About me section-->
@@ -72,7 +122,7 @@
                     <p>
                         My GitHub profile and previous work can be found here:
                         <br>
-                        <p class="center"><a href="https://github.com/infinitejess">Jessica Fellows GitHub</a></p>
+                        <p class="center"><a href="https://github.com/infinitejess" target="_blank">Jessica Fellows GitHub</a></p>
                     </p>
                 </div>
                 <!--Right side-->
@@ -81,33 +131,32 @@
                 </div>
             </div>
 
-            <!--Conaact me-->
-            <div class="Row" id="Contact">
-                <!--Contact image left side-->
-                <div class="Column_2 Column_tall">
-                    <img src="Images/contact.jpg" alt="Contact me">
-                </div>
-                <!--Contact form right side-->
-                <div class="Column_1 Column_Tall">
-                    <!--Form Data-->
-                    <form action="https://formspree.io/f/mleznnng" method="POST">
-                        <label>Name:</label>
-                            <input type="text" placeholder="Please enter your name here">
-                        <label>Email:</label>
-                            <input type="text" id="Email" placeholder="Please enter your email here">
-                        <label>Message:</label>
-                            <input type="text" id="Message" placeholder="Please write your message here">
-                            <input type="submit" value="Submit">
+            <!--Contact me-->
+            <div id="Contact">
+                <button onclick="openForm()" class="Pop_Up_Button">Contact</button>
+                <div class="form-popup" id="myForm">
+                    <form action="https://formspree.io/f/mleznnng" method="POST" class="form-container">
+                        <h1>Contact</h1>
+                        <label for="name"><b>Name</b></label>
+                            <input type="text" placeholder="Please enter your name here" name="name" required>
+                        <label for="phone"><b>Phone</b></label>
+                            <input type="text" placeholder="Please enter your phone number here" name="phone">
+                        <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Please enter your email here" name="email" required>
+                        <label for="message"><b>Message</b></label>
+                            <input type="text" placeholder="Please enter your message here" name="message">
+                        
+                            <button type="submit" class="btn">SUBMIT</button>
+                            <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                     </form>
                 </div>
             </div>
 
             <!--Footer-->
             <footer>
-                <p>
                     <p class="center"> Jessica Fellows &nbsp;|&nbsp; 2022</p>
                     <br>
-                </p>
             </footer>
+            <script src="JS/sample_portfolio.js" type="text/javascript"></script>
     </body>
 </html>
